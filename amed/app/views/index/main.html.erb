@@ -10,7 +10,32 @@
 </section>
 
 <section class="content container-fluid">
-    <h1>Hello, world!</h1>
+  <div class="row">
+    <div class="col-md-3">
+      <% current_user.clients.order(:name).each do |client| %>
+        <div class="box box-warning collapsed-box box-solid">
+          <div class="box-header with-border">
+            <h3 class="box-title"><%= client.name %></h3>
+            <div class="box-tools pull-right">
+              <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+              </button>
+            </div>
+          </div>
+          <div class="box-body">
+            <div class="row">
+              <div class="col-md-8">
+                Agendamentos: Agendamentos: Agendamentos: Agendamentos: Agendamentos: Agendamentos: Agendamentos:
+              </div>
+              <div class="col-md-2 pull-right">
+                <button type="button" class="btn btn-box-tool" ><i class="fa fa-calendar-plus-o fa-lg"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
 </section>
 
 
