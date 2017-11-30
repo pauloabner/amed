@@ -27,16 +27,18 @@ $(document).ready(function() {
         header: {
             left:   '',
             center: 'title',
-            right:  ''
+            right:  'agendaDay, agendaWeek'
         },
         defaultView: 'agendaWeek',
         weekends: false,
-        columnFormat: 'ddd',
+        columnFormat: 'ddd - D/M',
         allDaySlot: false,
-        timeFormat: 'H(:mm)',
+        timeFormat: 'h:mm',
         minTime: '08:00:00',
         maxTime: '18:00:00',
-        height: 'auto'
+        height: 'auto',
+        locale: 'pt-br',
+        titleFormat: 'D/M/YYYY'
     })
 });
 </script>

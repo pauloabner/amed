@@ -19,4 +19,5 @@
 //= require adminlte
 //= require moment
 //= require fullcalendar
+//= require pt-br
 //= require icheck
