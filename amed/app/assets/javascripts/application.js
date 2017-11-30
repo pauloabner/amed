@@ -19,3 +19,4 @@
 //= require adminlte
 //= require moment
 //= require fullcalendar
+//= require icheck

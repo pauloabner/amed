@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>AMed</title>    
+    <title>AMed</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': true %>    
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': true %>
 
     <link rel="stylesheet"
@@ -17,15 +17,15 @@
 
   <body class="hold-transition skin-blue sidebar-mini">
     <div class="wrapper">
-      <header class="main-header">    
+      <header class="main-header">
         <!-- Logo -->
-        <a href="#" class="logo">
+        <a href="/" class="logo">
           <!-- mini logo for sidebar mini 50x50 pixels -->
           <span class="logo-mini"><b>A</b>Med</span>
           <!-- logo for regular state and mobile devices -->
           <span class="logo-lg"><b>A</b>Med</span>
         </a>
-    
+
         <!-- Header Navbar -->
         <nav class="navbar navbar-static-top" role="navigation">
           <!-- Sidebar toggle button-->
@@ -70,7 +70,7 @@
                 </ul>
               </li>
               <!-- /.messages-menu -->
-    
+
               <!-- Notifications Menu -->
               <li class="dropdown notifications-menu">
                 <!-- Menu toggle button -->
@@ -144,7 +144,7 @@
                   <!-- The user image in the menu -->
                   <li class="user-header">
                     <%= image_tag("user2-160x160.jpg", class: "img-circle", alt: "User Image") %>
-    
+
                     <p>
                       <%= "#{@user[:name]} <br> #{@user[:job]}".html_safe %>
                       <small>Member since Nov. 2012</small>
@@ -171,7 +171,7 @@
                       <a href="#" class="btn btn-default btn-flat">Profile</a>
                     </div>
                     <div class="pull-right">
-                      <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                      <%= button_to('Sair', destroy_user_session_path, method: :delete, class: "btn btn-default btn-flat") %>
                     </div>
                   </li>
                 </ul>
@@ -185,10 +185,10 @@
         </nav>
       </header>
 
-      <aside class="main-sidebar">      
+      <aside class="main-sidebar">
         <!-- sidebar: style can be found in sidebar.less -->
         <section class="sidebar">
-    
+
           <!-- Sidebar user panel (optional) -->
           <div class="user-panel">
             <div class="pull-left image">
@@ -200,7 +200,7 @@
               <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
           </div>
-    
+
           <!-- search form (Optional) -->
           <form action="#" method="get" class="sidebar-form">
             <div class="input-group">
@@ -212,7 +212,7 @@
             </div>
           </form>
           <!-- /.search form -->
-    
+
           <!-- Sidebar Menu -->
           <ul class="sidebar-menu" data-widget="tree">
             <li class="header">Menu</li>
@@ -235,7 +235,7 @@
         <!-- /.sidebar -->
       </aside>
 
-      <div class="content-wrapper">        
+      <div class="content-wrapper">
         <%= yield %>
       </div>
 
@@ -263,17 +263,17 @@
               <li>
                 <a href="javascript:;">
                   <i class="menu-icon fa fa-birthday-cake bg-red"></i>
-    
+
                   <div class="menu-info">
                     <h4 class="control-sidebar-subheading">Langdons Birthday</h4>
-    
+
                     <p>Will be 23 on April 24th</p>
                   </div>
                 </a>
               </li>
             </ul>
             <!-- /.control-sidebar-menu -->
-    
+
             <h3 class="control-sidebar-heading">Tasks Progress</h3>
             <ul class="control-sidebar-menu">
               <li>
@@ -284,7 +284,7 @@
                         <span class="label label-danger pull-right">70%</span>
                       </span>
                   </h4>
-    
+
                   <div class="progress progress-xxs">
                     <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
                   </div>
@@ -292,7 +292,7 @@
               </li>
             </ul>
             <!-- /.control-sidebar-menu -->
-    
+
           </div>
           <!-- /.tab-pane -->
           <!-- Stats tab content -->
@@ -302,13 +302,13 @@
           <div class="tab-pane" id="control-sidebar-settings-tab">
             <form method="post">
               <h3 class="control-sidebar-heading">General Settings</h3>
-    
+
               <div class="form-group">
                 <label class="control-sidebar-subheading">
                   Report panel usage
                   <input type="checkbox" class="pull-right" checked>
                 </label>
-    
+
                 <p>
                   Some information about this general settings option
                 </p>
@@ -319,7 +319,7 @@
           <!-- /.tab-pane -->
         </div>
       </aside>
-        
+
       <div class="control-sidebar-bg"></div>
     </div>
   </body>
