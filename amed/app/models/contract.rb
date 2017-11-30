@@ -1,3 +1,3 @@
-class Job < ApplicationRecord
+class Contract < ApplicationRecord
     validates :name, presence: true
 end
