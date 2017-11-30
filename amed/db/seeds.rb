@@ -11,7 +11,4 @@ Job.find_or_create_by(name: 'Terapia Ocupacional')
 
 Contract.find_or_create_by(name: 'UNIMED')
 Contract.find_or_create_by(name: 'Particular')
-<<<<<<< HEAD
 Contract.find_or_create_by(name: 'Avaliação')
-=======
->>>>>>> 182ffc5b22c0983246f0aac6e63d347a130d5700
