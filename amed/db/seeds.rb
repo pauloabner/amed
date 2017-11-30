@@ -8,3 +8,6 @@
 
 Job.find_or_create_by(name: 'Fisioterapia')
 Job.find_or_create_by(name: 'Terapia Ocupacional')
+
+Contract.find_or_create_by(name: 'UNIMED')
+Contract.find_or_create_by(name: 'Particular')
