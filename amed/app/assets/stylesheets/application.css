@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
+ .color-unimed { background-color: #435f30 }
+ .color-particular { background-color: #304861 }
+ .color-avaliacao { background-color: #50376a }
